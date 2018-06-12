@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hlc.sell.mapper.SellerInfoMapper">
+    <resultMap id="BaseResultMap" type="com.hlc.sell.entity.SellerInfo">
+        <id column="id" jdbcType="VARCHAR" property="sellerId"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="openid" jdbcType="VARCHAR" property="openid"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, username, password, openid
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from seller_info
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from seller_info
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <insert id="insert" parameterType="com.hlc.sell.entity.SellerInfo">
+        insert into seller_info (id, username, password,
+        openid
+        )
+        values (#{id,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+        #{openid,jdbcType=VARCHAR})
+    </insert>
+
+
+    <update id="updateByPrimaryKey" parameterType="com.hlc.sell.entity.SellerInfo">
+        update seller_info
+        set username = #{username,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR},
+        openid = #{openid,jdbcType=VARCHAR},
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+</mapper>
