@@ -2,8 +2,12 @@ package com.hlc.sell.result;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Result<T> {
+public class Result<T>   implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     public int code;  //返回参数码
 
