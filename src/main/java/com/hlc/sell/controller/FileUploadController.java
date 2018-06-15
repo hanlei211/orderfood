@@ -1,5 +1,9 @@
 package com.hlc.sell.controller;
 
+import com.hlc.sell.utils.FileUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,12 +13,17 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.util.List;
 
 @Controller
 public class FileUploadController {
 
+    private static final Logger logger = LoggerFactory.getLogger(FileUploadController.class);
+
+    @Value("${web.upload-path}")
+    private String  path;
     /**
      * 获取file.html页面
      * @return
@@ -28,13 +37,17 @@ public class FileUploadController {
     @ResponseBody
     public String fileUpload(@RequestParam("fileName")MultipartFile file){
         if(file.isEmpty()){
-            return "false";
+            return "文件为空";
         }
         String fileName = file.getOriginalFilename();
+        logger.info("上传的文件名"+fileName);
+
+        String suffixName = fileName.substring(fileName.lastIndexOf("."));
+        logger.info("上传的文件名后缀名"+suffixName);
+
         int size = (int)file.getSize();
         System.out.println(fileName+"-->"+size);
 
-        String path = "D:/sellImages";
         File dest = new File(path +"/"+ fileName);
         if(!dest.getParentFile().exists()){
             //判断文件父目录是否存在
@@ -42,13 +55,13 @@ public class FileUploadController {
         }
         try{
             file.transferTo(dest);//保存文件
-            return "true";
+            return "文件上传成功";
         }catch(IllegalStateException e){
             e.printStackTrace();
-            return "false";
+            return "文件上传失败";
         }catch (Exception e){
             e.printStackTrace();
-            return "false";
+            return "文件上传失败";
         }
     }
 
@@ -71,17 +84,16 @@ public class FileUploadController {
 
         List<MultipartFile> files = ((MultipartHttpServletRequest)request).getFiles("fileName");
         if(files.isEmpty()){
-            return "false";
+            return "文件为空";
         }
 
-        String path = "D:/sellImages";
         for(MultipartFile file :files){
             String fileName = file.getOriginalFilename();
             int size = (int) file.getSize();
             System.out.println(fileName +"-->"+ size);
 
             if(file.isEmpty()){
-                return "false";
+                return "文件为空";
             }else{
                 File dest = new File(path+"/"+ fileName);
                 if(!dest.getParentFile().exists()){
@@ -92,11 +104,34 @@ public class FileUploadController {
                     file.transferTo(dest);
                 }catch(Exception e){
                     e.printStackTrace();
-                    return "false";
+                    return "文件上传失败";
                 }
             }
         }
-       return  "true";
+       return  "文件上传成功";
+    }
+
+
+    @RequestMapping(value = "/download", method = RequestMethod.POST)
+    @ResponseBody
+    public String Download() {
+        return "/filedownload";
+    }
+
+    @RequestMapping(value = "/downfile",method = RequestMethod.POST)
+    @ResponseBody
+    public  void  downloadFile(@RequestParam("fileName")MultipartFile file,HttpServletResponse response){
+        if(file.isEmpty()){
+            return ;
+        }
+        String fileName = file.getOriginalFilename();
+        logger.info("下载的文件名"+fileName);
+
+        String suffixName = fileName.substring(fileName.lastIndexOf("."));
+        logger.info("下载的文件名后缀名"+suffixName);
+
+        String result = FileUtil.downloadFile(response,fileName);
+        System.out.println(result);
     }
 
 }

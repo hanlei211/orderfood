@@ -32,6 +32,20 @@ spring:
   #取消模板缓存
   thymeleaf:
     cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+   #http 配置
+#   http:
+#    multipart:
+#          enabled: true
+#          file-size-threshold : 0 #支持文件写入磁盘.
+#          location: D:/sellUpload/ #上传文件的目录
+#          max-file-size: 100MB
+
+#文件上传
+web:
+  upload-path: D:/sellUpload/
+
 
 mybatis:
   type-aliases-package: com.hlc.order.entity

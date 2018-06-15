@@ -92,7 +92,7 @@ public class DruidConfig {
 
 
     @Primary
-    @Bean
+    @Bean(destroyMethod = "close", initMethod = "init")
     public DataSource druidDataSource() {
         DruidDataSource datasource = new DruidDataSource();
 
