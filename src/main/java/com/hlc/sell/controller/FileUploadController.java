@@ -48,7 +48,7 @@ public class FileUploadController {
         int size = (int)file.getSize();
         System.out.println(fileName+"-->"+size);
 
-        File dest = new File(path +"/"+ fileName);
+        File dest = new File(path + fileName);
         if(!dest.getParentFile().exists()){
             //判断文件父目录是否存在
             dest.getParentFile().mkdir();
@@ -112,26 +112,25 @@ public class FileUploadController {
     }
 
 
-    @RequestMapping(value = "/download", method = RequestMethod.POST)
-    @ResponseBody
+    @RequestMapping(value = "/download", method = RequestMethod.GET)
     public String Download() {
         return "/filedownload";
     }
 
-    @RequestMapping(value = "/downfile",method = RequestMethod.POST)
-    @ResponseBody
-    public  void  downloadFile(@RequestParam("fileName")MultipartFile file,HttpServletResponse response){
-        if(file.isEmpty()){
-            return ;
-        }
-        String fileName = file.getOriginalFilename();
+    @RequestMapping(value = "/downfile",method = RequestMethod.GET)
+    public  String  downloadFile(HttpServletResponse response){
+        String fileName = path + "3.txt";
         logger.info("下载的文件名"+fileName);
 
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
         logger.info("下载的文件名后缀名"+suffixName);
-
+        File file=new File(fileName);
+        if(!file.exists()){
+            return "下载的文件不存在！";
+        }
         String result = FileUtil.downloadFile(response,fileName);
         System.out.println(result);
+        return  result;
     }
 
 }

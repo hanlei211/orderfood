@@ -1,29 +1,21 @@
-2018-06-15 13:48:23 30272 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
-2018-06-15 16:05:30 26079 [http-nio-9996-exec-4] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-06-15 16:18:25 14873 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:18:28 18201 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:19:25 10873 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:19:26 12530 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:19:28 14457 [http-nio-9996-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:19:28 14656 [http-nio-9996-exec-4] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:19:30 16232 [http-nio-9996-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:34 10833 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:35 12244 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:35 12456 [http-nio-9996-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:35 12655 [http-nio-9996-exec-4] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:36 12854 [http-nio-9996-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:20:36 13073 [http-nio-9996-exec-6] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:23:31 9455 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:23:58 7797 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:23:58 8608 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:54:02 15035 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:54:55 23008 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:55:31 21076 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:56:46 8172 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:56:47 9191 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:58:15 11482 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:59:00 7201 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:59:01 8171 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 16:59:31 7608 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 17:00:44 8946 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
-2018-06-15 17:00:45 9909 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+2018-06-19 16:29:54 9515 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+2018-06-19 16:29:55 10003 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 16:29:57 11672 [http-nio-9996-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+2018-06-19 16:30:43 14263 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/downloadFile] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 16:32:08 20206 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+2018-06-19 17:33:26 1104823 [http-nio-9996-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/upload] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:33:34 1112760 [http-nio-9996-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/fileupload] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:35:03 1202160 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:35:18 1217312 [http-nio-9996-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:35:22 1220529 [http-nio-9996-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:35:26 1224678 [http-nio-9996-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:20 26998 [http-nio-9996-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:24 30770 [http-nio-9996-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:29 35700 [http-nio-9996-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:33 39687 [http-nio-9996-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:51 57505 [http-nio-9996-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:54 61082 [http-nio-9996-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:40:58 64276 [http-nio-9996-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:41:20 86487 [http-nio-9996-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:42:46 173100 [http-nio-9996-exec-9] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/downlod] in DispatcherServlet with name 'dispatcherServlet'
+2018-06-19 17:42:50 176780 [http-nio-9996-exec-10] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/downlod] in DispatcherServlet with name 'dispatcherServlet'
