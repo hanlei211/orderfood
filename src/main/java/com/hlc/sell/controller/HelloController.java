@@ -1,7 +1,5 @@
 package com.hlc.sell.controller;
 
-import com.hlc.sell.config.DruidConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +14,11 @@ public class HelloController {
     @RequestMapping("/indexindex")
     private  String  index1(){
         return "index";
+    }
+
+    @RequestMapping("/hello")
+    private  String  index2(){
+        return "hello";
     }
 
 

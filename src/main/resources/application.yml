@@ -1,5 +1,5 @@
 server:
-  port: 9996
+  port: 9994
 
   #spring:
   #   profiles :
@@ -39,6 +39,9 @@ spring:
     restart:
       trigger-file: trigger.txt   #触发器触发热部署
       exclude: application.yml
+  #自定义banner
+  banner:
+    location: banner.txt
    #http 配置
 #   http:
 #    multipart:
@@ -72,4 +75,7 @@ pagehelper:
 boy:
   name: hanlei
   sex: nan
+
+
+
 
