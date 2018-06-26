@@ -28,9 +28,10 @@ public class CustomerException {
     }
 
     @ExceptionHandler(value = MyException.class)
-    Object handleMyException(Exception e){
+    Object handleMyException(Exception e,HttpServletRequest request){
         ModelAndView  modelAndView = new ModelAndView();
         modelAndView.setViewName("error.html");
+        modelAndView.addObject("url",request.getRequestURL());
         modelAndView.addObject("msg",e.getMessage());
         return modelAndView;
     }
