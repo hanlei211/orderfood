@@ -2,6 +2,7 @@ package com.hlc.sell.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -11,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @Modify by
  */
 @Configuration
-public class InterceptorConfig  extends WebMvcConfigurerAdapter {
+public class InterceptorConfig  implements WebMvcConfigurer {
 
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TestInterceptor()).addPathPatterns("/**");
