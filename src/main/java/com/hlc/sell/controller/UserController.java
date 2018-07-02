@@ -22,21 +22,21 @@ public class UserController {
 
 
     @RequestMapping("/say")
-    public String say(){
-        return "springboot-a"+userService;
+    public String say() {
+        return "springboot-a" + userService;
     }
 
     @RequestMapping("/find")
-    public String find(){
-        User user =  userService.find("han");
+    public String find() {
+        User user = userService.find("han");
         ModelAndView mav = new ModelAndView();
-        mav.addObject("user","sadf");
-        return "name"+user.getName()+"--age"+ user.getAge();
+        mav.addObject("user", "sadf");
+        return "name" + user.getName() + "--age" + user.getAge();
     }
 
 
     @RequestMapping("/ajax")
-    public String find1(){
-        return "[''message':'123dfx']";
+    public String find1() {
+        return "['message':'123dfx']";
     }
 }

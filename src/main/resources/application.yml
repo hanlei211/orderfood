@@ -26,7 +26,6 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-
     druid.stat.slowSqlMillis : 5000
 
   #取消模板缓存
@@ -56,7 +55,7 @@ web:
 
 
 mybatis:
-  type-aliases-package: com.hlc.order.entity
+  type-aliases-package: com.hlc.sell.entity
   config-locations: classpath:mapper/mybatis-config.xml
   mapper-locations: classpath:mapper/*.xml
   mapper:

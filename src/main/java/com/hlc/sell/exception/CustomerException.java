@@ -19,7 +19,7 @@ public class CustomerException {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     Object handleException(Exception e, HttpServletRequest request){
-        logger.error("url{},msg{}",request.getRequestURL(),e.getMessage());
+        logger.error("url:{},msg:{}",request.getRequestURL(),e.getMessage());
         Map<String,Object>  map = new HashMap<>();
         map.put("code",100);
         map.put("msg",e.getMessage());

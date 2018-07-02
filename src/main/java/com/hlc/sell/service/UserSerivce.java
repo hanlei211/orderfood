@@ -1,6 +1,7 @@
 package com.hlc.sell.service;
 
 import com.hlc.sell.entity.User;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author rjyx
@@ -8,6 +9,7 @@ import com.hlc.sell.entity.User;
  * @Date create in 2018/6/27
  * @Modify by
  */
+@Service
 public interface UserSerivce {
     
     public int insert(User user);

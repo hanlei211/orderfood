@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 指定工作空间，要与接口名相同，源代码没有去看，猜测应该是通过"这里的namespace.下边方法的id"来定位方法的 -->
 <mapper namespace="com.hlc.sell.mapper.UserMapper">
 
     <!-- insert user -->
@@ -10,17 +9,17 @@
     </insert>
 
     <!-- update user -->
-    <update id="update" parameterType="com.hlc.sell.entity.User">
+    <update id="update" parameterType="java.lang.String">
         UPDATE USER SET Name=#{name} , Age=#{age}  WHERE Name=#{name}
     </update>
 
     <!-- find user -->
-    <select id="find" parameterType="String" resultType="com.hlc.sell.entity.User">
-        SELECT Name,Age FROM USER WHERE Name=#{name}
+    <select id="find" parameterType="java.lang.String" resultType="com.hlc.sell.entity.User">
+        SELECT * FROM USER WHERE Name=#{name}
     </select>
 
     <!-- delete user -->
-    <delete id="delete" parameterType="String">
+    <delete id="delete" parameterType="java.lang.String">
         DELETE FROM USER WHERE Name=#{name}
     </delete>
 </mapper>
