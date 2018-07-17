@@ -1,12 +1,14 @@
 package com.hlc.sell.controller;
 
 import com.hlc.sell.entity.User;
-import com.hlc.sell.service.UserSerivce;
+import com.hlc.sell.service.UserService;
+import com.hlc.sell.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 
 /**
  * @Author rjyx
@@ -14,11 +16,11 @@ import javax.annotation.Resource;
  * @Date create in 2018/6/27
  * @Modify by
  */
-@RestController
+@Controller
 public class UserController {
 
-    @Resource
-    private UserSerivce userService;
+    @Autowired
+    private UserService userService;
 
 
     @RequestMapping("/say")
@@ -27,11 +29,12 @@ public class UserController {
     }
 
     @RequestMapping("/find")
+    @ResponseBody
     public String find() {
         User user = userService.find("han");
         ModelAndView mav = new ModelAndView();
         mav.addObject("user", "sadf");
-        return "name" + user.getName() + "--age" + user.getAge();
+        return "name:" + user.getName() + "--age:" + user.getAge();
     }
 
 

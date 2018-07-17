@@ -3,23 +3,29 @@
 
 <mapper namespace="com.hlc.sell.mapper.UserMapper">
 
+
+    <resultMap id="BaseResultMap" type="com.hlc.sell.entity.User">
+        <result column="Name" jdbcType="VARCHAR" property="name"/>
+        <result column="Age" jdbcType="VARCHAR" property="age"/>
+    </resultMap>
+
     <!-- insert user -->
-    <insert id = "insert" parameterType="com.hlc.sell.entity.User">
-        INSERT INTO USER(Name,Age) VALUES(#{name},#{age});
-    </insert>
+    <!--<insert id = "insert" parameterType="com.hlc.sell.entity.User">-->
+        <!--INSERT INTO USER(Name,Age) VALUES(#{name},#{age});-->
+    <!--</insert>-->
 
     <!-- update user -->
-    <update id="update" parameterType="java.lang.String">
-        UPDATE USER SET Name=#{name} , Age=#{age}  WHERE Name=#{name}
-    </update>
+    <!--<update id="update" parameterType="java.lang.String">-->
+        <!--UPDATE USER SET Name=#{name} , Age=#{age}  WHERE Name=#{name}-->
+    <!--</update>-->
 
     <!-- find user -->
-    <select id="find" parameterType="java.lang.String" resultType="com.hlc.sell.entity.User">
+    <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
         SELECT * FROM USER WHERE Name=#{name}
     </select>
 
     <!-- delete user -->
-    <delete id="delete" parameterType="java.lang.String">
-        DELETE FROM USER WHERE Name=#{name}
-    </delete>
+    <!--<delete id="delete" parameterType="java.lang.String">-->
+        <!--DELETE FROM USER WHERE Name=#{name}-->
+    <!--</delete>-->
 </mapper>

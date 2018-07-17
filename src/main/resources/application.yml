@@ -55,9 +55,9 @@ web:
 
 
 mybatis:
-  type-aliases-package: com.hlc.sell.entity
+  type-aliases-package: com.hlc.sell
   config-locations: classpath:mapper/mybatis-config.xml
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
   mapper:
     mappers:
         - tk.mybatis.springboot.util.MyMapper

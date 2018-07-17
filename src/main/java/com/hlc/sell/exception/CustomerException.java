@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-@ControllerAdvice
+//@ControllerAdvice
 public class CustomerException {
     private  static  final  Logger  logger = LoggerFactory.getLogger(CustomerException.class);
 

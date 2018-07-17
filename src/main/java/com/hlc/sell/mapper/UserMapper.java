@@ -2,7 +2,7 @@ package com.hlc.sell.mapper;
 
 import com.hlc.sell.entity.User;
 import com.hlc.sell.utils.MyMapper;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.*;
 
 /**
  * @Author rjyx
@@ -12,12 +12,13 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper  extends MyMapper<User> {
-
-     int insert(User user);
-
-     void update(User user);
-
-     void delete(String name);
-
+//     @Insert("INSERT INTO USER(Name,Age) VALUES(#{name},#{age})")
+//     int insert(User user);
+//     @Update("UPDATE USER SET Name=#{name},Age=#{age}  WHERE Name=#{name}")
+//     void update(User user);
+//     @Delete("DELETE FROM USER WHERE Name=#{name}")
+//     void delete(String name);
+//     @Select(" SELECT * FROM USER WHERE Name=#{name}")
      User find(String name);
+
 }

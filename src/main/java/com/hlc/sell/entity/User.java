@@ -1,5 +1,6 @@
 package com.hlc.sell.entity;
 
+
 import lombok.Data;
 
 import java.io.Serializable;
@@ -7,20 +8,20 @@ import java.io.Serializable;
 @Data
 public class User  implements Serializable {
 
-    public  String name;
+    public  String Name;
 
-    public  String  age;
+    public  String  Age;
 
-    public User(String name, String age) {
-        this.name = name;
-        this.age = age;
+    public User(String Name, String Age) {
+        this.Name = Name;
+        this.Age = Age;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
+                "Name='" + Name + '\'' +
+                ", Age='" + Age + '\'' +
                 '}';
     }
 }
