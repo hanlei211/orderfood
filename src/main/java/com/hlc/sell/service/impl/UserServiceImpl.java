@@ -18,10 +18,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     public UserMapper userMapper;
 
-//    @Override
-//    public void update(User user) {
-//        userMapper.update(user);
-//    }
+    @Override
+    public void update(User user) {
+        userMapper.update(user);
+    }
 
     @Override
     public int insert(User user) {

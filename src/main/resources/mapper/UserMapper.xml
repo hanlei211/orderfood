@@ -15,9 +15,9 @@
     </insert>
 
     <!-- update user -->
-    <!--<update id="update" parameterType="java.lang.String">-->
-        <!--UPDATE USER SET Name=#{name} , Age=#{age}  WHERE Name=#{name}-->
-    <!--</update>-->
+    <update id="update" parameterType="java.lang.String">
+        UPDATE USER SET Name=#{name} , Age=#{age}  WHERE Name=#{name}
+    </update>
 
     <!-- find user -->
     <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">

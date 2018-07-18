@@ -31,16 +31,22 @@ public class UserController {
     @RequestMapping("/find")
     @ResponseBody
     public String find() {
-        User user = userService.find("han");
+        User user = userService.find("sz");
         ModelAndView mav = new ModelAndView();
         mav.addObject("user", "sadf");
         return "name:" + user.getName() + "--age:" + user.getAge();
     }
 
+    @RequestMapping("/update")
+    @ResponseBody
+    public void update() {
+        userService.update(new User("sz", "26"));
+    }
+
     @RequestMapping("/insert")
     @ResponseBody
     public int insert() {
-        User user = new User("sz","25");
+        User user = new User("sz", "25");
         return userService.insert(user);
     }
 

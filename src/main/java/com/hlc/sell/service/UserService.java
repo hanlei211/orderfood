@@ -12,7 +12,8 @@ import org.springframework.stereotype.Service;
 public interface UserService {
     
     public int insert(User user);
-//    public void update(User user);
+
+    public void update(User user);
 
     public User find(String name);
 
