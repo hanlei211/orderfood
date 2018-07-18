@@ -4,43 +4,42 @@ server:
   #spring:
   #   profiles :
   #     active : test
-
 spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/sell?characterEncoding=utf-8&useSSL=false
+    datasource:
+        username: root
+        password: 123456
+        url: jdbc:mysql://localhost:3306/sell?characterEncoding=utf-8&useSSL=false
 
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    filters: stat
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
-    druid.stat.slowSqlMillis : 5000
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        druid.stat.slowSqlMillis : 5000
 
-  #取消模板缓存
-  thymeleaf:
-    cache: false
-    prefix: classpath:/templates/
-    suffix: .html
+    #取消模板缓存
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates/
+        suffix: .html
 
-  devtools:
-    restart:
-      trigger-file: trigger.txt   #触发器触发热部署
-      exclude: application.yml
-  #自定义banner
-  banner:
-    location: banner.txt
+    devtools:
+        restart:
+            trigger-file: trigger.txt   #触发器触发热部署
+            exclude: application.yml
+    #自定义banner
+    banner:
+        location: banner.txt
    #http 配置
 #   http:
 #    multipart:
@@ -51,11 +50,11 @@ spring:
 
 #文件上传
 web:
-  upload-path: D:/sellUpload/
+    upload-path: D:/sellUpload/
 
 
 mybatis:
-  type-aliases-package: com.hlc.sell
+  type-aliases-package: com.hlc.sell.entity
   config-locations: classpath:mapper/mybatis-config.xml
   mapper-locations: classpath:mapper/*Mapper.xml
   mapper:
@@ -64,16 +63,19 @@ mybatis:
     not-empty: false
     identity: MYSQL
 
-
+#pagehelper
 pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
-
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+    returnPageInfo: check
 boy:
   name: hanlei
   sex: nan
+
+swagger:
+    show: true
 
 
 

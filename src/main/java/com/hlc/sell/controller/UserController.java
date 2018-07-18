@@ -37,6 +37,13 @@ public class UserController {
         return "name:" + user.getName() + "--age:" + user.getAge();
     }
 
+    @RequestMapping("/insert")
+    @ResponseBody
+    public int insert() {
+        User user = new User("sz","25");
+        return userService.insert(user);
+    }
+
 
     @RequestMapping("/ajax")
     public String find1() {

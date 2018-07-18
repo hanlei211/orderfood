@@ -13,7 +13,7 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface UserMapper  extends MyMapper<User> {
 //     @Insert("INSERT INTO USER(Name,Age) VALUES(#{name},#{age})")
-//     int insert(User user);
+     int insert(User user);
 //     @Update("UPDATE USER SET Name=#{name},Age=#{age}  WHERE Name=#{name}")
 //     void update(User user);
 //     @Delete("DELETE FROM USER WHERE Name=#{name}")

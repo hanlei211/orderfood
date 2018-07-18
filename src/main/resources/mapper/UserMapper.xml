@@ -10,9 +10,9 @@
     </resultMap>
 
     <!-- insert user -->
-    <!--<insert id = "insert" parameterType="com.hlc.sell.entity.User">-->
-        <!--INSERT INTO USER(Name,Age) VALUES(#{name},#{age});-->
-    <!--</insert>-->
+    <insert id = "insert" parameterType="com.hlc.sell.entity.User">
+        INSERT INTO USER(Name,Age) VALUES(#{name},#{age});
+    </insert>
 
     <!-- update user -->
     <!--<update id="update" parameterType="java.lang.String">-->

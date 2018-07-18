@@ -23,4 +23,8 @@
             <property name="returnPageInfo" value="none"/>
         </plugin>
     </plugins>
+
+    <!--<mappers>-->
+        <!--<mapper class="com.hlc.sell.mapper.UserMapper"/>-->
+    <!--</mappers>-->
 </configuration>
