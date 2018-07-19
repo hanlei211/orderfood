@@ -1,5 +1,6 @@
 package com.hlc.sell.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.hlc.sell.entity.LearnResource;
 import com.hlc.sell.service.LearnService;
 import com.hlc.sell.utils.ServletUtil;
@@ -7,8 +8,6 @@ import com.hlc.sell.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,7 +39,7 @@ public class LearnController {
      * @param response
      */
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public void addLearn(HttpServletRequest request , HttpServletResponse response) throws JSONException {
+    public void addLearn(HttpServletRequest request , HttpServletResponse response)  {
         JSONObject result=new JSONObject();
         String author = request.getParameter("author");
         String title = request.getParameter("title");

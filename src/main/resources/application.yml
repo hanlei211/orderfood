@@ -47,6 +47,16 @@ spring:
 #          file-size-threshold : 0 #支持文件写入磁盘.
 #          location: D:/sellUpload/ #上传文件的目录
 #          max-file-size: 100MB
+    mail:
+      default-encoding: UTF-8
+      host: smtp.qq.com
+      smtp:
+          auth:  true
+      password: gfkxpzuxhbyjbjai
+      port: 587
+      protocol: smtp
+      username: 463779213@qq.com
+      fromMail: 463779213@qq.com
 
 #文件上传
 web:
@@ -76,6 +86,8 @@ boy:
 
 swagger:
     show: true
+
+
 
 
 
